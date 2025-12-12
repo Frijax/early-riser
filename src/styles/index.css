@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Import fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+  body {
+    @apply bg-gradient-to-br from-cream-50 via-warm-50 to-sage-50 text-warm-900 font-sans;
+    @apply min-h-screen antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  /* Custom button styles */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all;
+    @apply focus:outline-none focus:ring-2 focus:ring-warm-500 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-warm-500 text-white hover:bg-warm-600;
+  }
+
+  .btn-secondary {
+    @apply bg-cream-200 text-warm-900 hover:bg-cream-300;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-warm-700 hover:bg-cream-100;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white/70 backdrop-blur-sm rounded-2xl border border-warm-200;
+    @apply shadow-sm hover:shadow-lg transition-shadow;
+  }
+
+  /* Input styles */
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-warm-200;
+    @apply bg-white/50 backdrop-blur-sm;
+    @apply focus:outline-none focus:ring-2 focus:ring-warm-500 focus:border-transparent;
+    @apply placeholder-warm-400 text-warm-900;
+  }
+}
+
+@layer utilities {
+  /* Custom utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
